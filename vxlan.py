@@ -2,8 +2,8 @@
 
 Two mininet vms are needed, the topology is:
 
-   h1 --- s1 ---- L3 underlay --- s1 --- h1
-   h2 ----|                       | ---- h2
+   (vni_1)h1 --- (vtep)s1 ---- L3 underlay --- s1(vtep) --- h1(vni_2)
+   (vni_2)h2 ---------|                         | --------- h2(vni_1)
 
 vm1> sudo python vxlan.py 192.168.253.132 100 200
 vm2> sudo python vxlan.py 192.168.253.131 200 100
