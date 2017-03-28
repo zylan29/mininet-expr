@@ -29,7 +29,7 @@ if __name__ == '__main__':
     vni_1 = int(sys.argv[2])
     vni_2 = int(sys.argv[3])
 
-    net = Mininet(topo=SingleSwitchTopo())
+    net = Mininet(topo=SingleSwitchTopo(2))
     try:
         net.start()
 
